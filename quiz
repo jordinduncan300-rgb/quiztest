@@ -1,4 +1,66 @@
-https://raw.githubusercontent.com/jordinduncan300-rgb/quiztest/5dbe4bc8b729ba7f3402798999a1f1483ce466fa/quiz}
+local VERSION = "2.7.3"
+
+local letters = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"}
+local userCooldowns = {}
+local currentQuestion
+local questionAnsweredBy
+local quizRunning = false
+local HttpService = game:GetService("HttpService")
+local players = game:GetService("Players")
+local localPlayer = players.LocalPlayer
+local blockedPlayers = {}
+local whiteListedplayers = {}
+local mode = "Quiz"
+local answeredCorrectly = {}
+local submittedAnswer = {}
+local awaitingAnswer = false
+local questionPoints = 1
+local timeSinceLastMessage = tick()
+local placeId = game.PlaceId
+local replicatedStorage = game:GetService("ReplicatedStorage")
+local StarterGui = game:GetService("StarterGui")
+local textChatService = game:GetService("TextChatService")
+local quizCooldown = false
+local answerOptionsSaid = 0 -- how many answer options have been said (0 = none, 1 = a, 2 = b, etc.). Prevents users from spamming letters before they even know what the corresponding answer option is
+local minMessageCooldown = 2.3 -- how much you need to wait to send another message to avoid ratelimit
+local whiteListEnabled = false
+local ContextActionService = game:GetService("ContextActionService")
+local UserInputService = game:GetService("UserInputService")
+
+local settings = {
+	questionTimeout = 10,
+	userCooldown = 5,
+	sendLeaderBoardAfterQuestions = 0, -- only send quiz LB at end of quiz by default
+	automaticLeaderboards = true,
+	automaticCurrentQuizLeaderboard = false,
+	automaticServerQuizLeaderboard = true,
+	signStatus = true, -- Booth game: update sign text with relevant question text and timer
+	boothStatus = true, -- Booth game: also update your booth's text
+	boothGameFullMode = false, -- Booth game: use the sign/booth for all text, including answer options
+	boothGameSuppressNotifs = true, -- Booth game: suppress push notifications while a quiz is running
+	romanNumbers = false, -- Booth game: use roman numerals to minimize filtering
+	disableChat = false, -- Booth game: communicate exclusively through sign/booth
+	autoplay = false,
+	repeatTagged = true,
+	sendDetailedCategorylist = false, -- off by default since sending it this way tends to trigger the filter. Blame Roblox
+	removeLeavingPlayersFromLB = true,
+}
+
+local numberMap = {
+	{1000, 'M'},
+	{900, 'CM'},
+	{500, 'D'},
+	{400, 'CD'},
+	{100, 'C'},
+	{90, 'XC'},
+	{50, 'L'},
+	{40, 'XL'},
+	{10, 'X'},
+	{9, 'IX'},
+	{5, 'V'},
+	{4, 'IV'},
+	{1, 'I'}
+}
 
 function intToRoman(num)
 	local roman = ""
@@ -811,12 +873,18 @@ end
 do
 	local kingVon = categoryManager.New("King Von")
 
-	kingVon:Add("whats 62+1=?", {"63", "64"}, 2)
+	kingVon:Add("whats 62+1=?", {"64", "63"}, 1)
 	-- Correct answer: B)64  (script will shuffle options randomly each time)
 
 	kingVon:Add("where is king von from", {"O block", "Atlanta"}, 1)
 	-- Correct answer: B)Atlanta
+	
 	kingVon:Add("whats king vons most famous song", {"crazy story", "took her to the o"}, 1)
+	-- Correct answer: B)64  (script will shuffle options randomly each time)
+	
+	kingVon:Add("whats the name of the song that king von made with 21 savage", {"the case", "400"}, 1)
+	
+	kingVon:Add("whats king vons son", {"dayvon jr", "he has no son"}, 1)
 	-- Correct answer: B)64  (script will shuffle options randomly each time)
 
 	local countriesEasy = categoryManager.New("Guess the country", "easy")
