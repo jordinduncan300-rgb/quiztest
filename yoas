@@ -1303,7 +1303,7 @@ worldCup:Add("Who was the captain of Argentina during their 2022 World Cup victo
 worldCup:Add("Which country has won the most World Cups?", {"Brazil", "Germany", "Argentina", "Italy"}, 2)
 worldCup:Add("In which year did France last win the World Cup before 2018?", {"1998", "2002", "2014", "2006"})
 worldCup:Add("Which country hosted the 2018 FIFA World Cup?", {"Russia", "Brazil", "Qatar", "South Africa"})
-
+worldCup:Add("Which country won the 2026 FIFA World Cup?", {"Spain", "Argentina", "Portugal", "South Africa"})
 worldCup:Add("Who scored the winning goal in the 2022 World Cup final?", {"Lionel Messi", "Kylian Mbappé", "Angel Di Maria", "Julián Álvarez"})
 worldCup:Add("Which country won the 2014 FIFA World Cup?", {"Germany", "Argentina", "Brazil", "Netherlands"})
 worldCup:Add("What is the record for most goals scored in a single World Cup by one player?", {"13 (Just Fontaine)", "8", "10", "11"})
