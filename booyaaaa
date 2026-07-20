@@ -504,8 +504,7 @@ categories = {
         [categoryName2] = 3
         ...
     }
-}
-]]--
+}]]--
 
 local difficultyOrder = {"", "easy", "medium", "hard"} -- the order in which difficulties should appear when sending the category list
 function categoryManager.New(categoryName: string, difficulty: string?)
@@ -871,51 +870,6 @@ end
 --- Questions ---
 -- Built-in quiz definitions are wrapped in do-end block to prevent reaching the 200 local variable limit
 do
-	do
-		-- === FOOTBALL PLAYERS CATEGORIES ===
-
-		local ronaldo = categoryManager.New("Ronaldo")
-		ronaldo:Add("What is Cristiano Ronaldo's current jersey number at Al-Nassr?", {"7", "9", "11", "10"}, 1)
-		ronaldo:Add("Which country is Cristiano Ronaldo from?", {"Portugal", "Brazil", "Argentina", "Spain"})
-		ronaldo:Add("How many Ballon d'Or awards has Ronaldo won (as of 2025)?", {"5", "8", "7", "6"})
-		ronaldo:Add("What is Ronaldo's famous goal celebration called?", {"Siuuu", "Messi dance", "Neymar flip", "Mbappé run"})
-		ronaldo:Add("Which club has Ronaldo won the most Champions League titles with?", {"Real Madrid", "Manchester United", "Juventus", "Al-Nassr"}, 2)
-
-		local messi = categoryManager.New("Messi")
-		messi:Add("What is Lionel Messi's current jersey number at Inter Miami?", {"10", "30", "19", "7"})
-		messi:Add("Which country is Lionel Messi from?", {"Argentina", "Brazil", "Portugal", "Spain"})
-		messi:Add("How many Ballon d'Or awards has Messi won?", {"8", "7", "6", "5"})
-		messi:Add("Which club did Messi spend the majority of his career at?", {"Barcelona", "Paris Saint-Germain", "Inter Miami", "Newell's Old Boys"})
-		messi:Add("What is Messi's famous nickname?", {"GOAT", "CR7", "Neymar Jr", "Kyky"}, 2)
-
-		local neymar = categoryManager.New("Neymar")
-		neymar:Add("What is Neymar's usual jersey number?", {"10", "7", "11", "9"})
-		neymar:Add("Which country is Neymar from?", {"Brazil", "Portugal", "Argentina", "France"})
-		neymar:Add("Which club did Neymar play for between Barcelona and Al-Hilal?", {"Paris Saint-Germain", "Santos", "Real Madrid", "Liverpool"})
-		neymar:Add("What is Neymar famous for in terms of playing style?", {"Dribbling & flair", "Long shots", "Aerial ability", "Tackling"})
-		neymar:Add("Neymar's full name is?", {"Neymar da Silva Santos Júnior", "Neymar Silva", "Neymar Jr Santos", "Neymar da Silva"}, 2)
-
-		local mbappe = categoryManager.New("Mbappé")
-		mbappe:Add("What is Kylian Mbappé's jersey number at Real Madrid?", {"9", "7", "10", "11"})
-		mbappe:Add("Which country is Kylian Mbappé from?", {"France", "Brazil", "Portugal", "Argentina"})
-		mbappe:Add("Which club did Mbappé play for before joining Real Madrid?", {"Paris Saint-Germain", "Monaco", "Barcelona", "Liverpool"})
-		mbappe:Add("What position does Mbappé mainly play?", {"Striker / Winger", "Midfielder", "Defender", "Goalkeeper"})
-		mbappe:Add("Mbappé won the World Cup with France in which year?", {"2018", "2022", "2014", "2026"}, 2)
-
-		local yamal = categoryManager.New("Lamine Yamal")
-		yamal:Add("What is Lamine Yamal's jersey number at Barcelona?", {"19", "10", "7", "11"})
-		yamal:Add("Which country is Lamine Yamal from?", {"Spain", "Brazil", "France", "Morocco"})
-		yamal:Add("Which club does Lamine Yamal play for?", {"Barcelona", "Real Madrid", "Paris Saint-Germain", "Atletico Madrid"})
-		yamal:Add("What is Lamine Yamal's main position?", {"Right Winger", "Striker", "Central Midfielder", "Left Back"})
-		yamal:Add("Lamine Yamal became famous after helping Spain win which tournament?", {"Euro 2024", "World Cup 2022", "Copa America 2024", "Nations League"}, 2)
-
-		-- Old categories (kept so you don't lose them)
-		local kingVon = categoryManager.New("King Von")
-		kingVon:Add("whats 62+1=?", {"64", "63"}, 1)
-		kingVon:Add("where is king von from", {"O block", "Atlanta"}, 1)
-		-- ... (keep the rest of your old categories here if you want)
-
-	end -- End of quiz definitions
 	local kingVon = categoryManager.New("King Von")
 
 	kingVon:Add("whats 62+1=?", {"64", "63"}, 1)
@@ -1302,6 +1256,30 @@ do
 	worldRecords:Add("Which is the largest country by land area?", {"Russia", "China", "United States", "Canada"})
 	worldRecords:Add("Which is the highest mountain in the world?", {"Mount Everest", "K2", "Mount Kilimanjaro", "Mount Fuji"})
 	worldRecords:Add("What is the longest word in a major dictionary?", {"Pneumonoultramicroscopicsilicovolcanoconiosis", "Supercalifragilisticexpialidocious", "Hippopotomonstrosesquippedaliophobia", "Floccinaucinihilipilification"}, 2)
+
+	-- NEW FOOTBALL PLAYERS CATEGORY
+	local footballPlayers = categoryManager.New("Football Players")
+
+	footballPlayers:Add("What number does Cristiano Ronaldo wear?", {"7", "9", "10", "11"})
+	footballPlayers:Add("What is Cristiano Ronaldo's full name?", {"Cristiano Ronaldo dos Santos Aveiro", "Cristiano Ronaldo Silva", "Ronaldo Nazário", "Cristiano Messi"})
+	footballPlayers:Add("How many Ballon d'Or awards has Lionel Messi won (as of 2025)?", {"8", "7", "6", "9"}, 2)
+
+	footballPlayers:Add("What club is Lionel Messi currently playing for?", {"Inter Miami", "Barcelona", "PSG", "Manchester City"})
+	footballPlayers:Add("What number is Lionel Messi most famous for wearing?", {"10", "30", "19", "7"})
+
+	footballPlayers:Add("What is Neymar's full name?", {"Neymar da Silva Santos Júnior", "Neymar Santos", "Neymar Jr Silva", "Neymar dos Santos"}, 2)
+	footballPlayers:Add("What number does Neymar usually wear?", {"10", "11", "7", "9"})
+	footballPlayers:Add("Which club did Neymar play for before joining PSG?", {"Barcelona", "Santos", "Real Madrid", "Liverpool"})
+
+	footballPlayers:Add("What number does Kylian Mbappé wear at Real Madrid?", {"9", "7", "10", "11"})
+	footballPlayers:Add("Which country is Kylian Mbappé from?", {"France", "Brazil", "Argentina", "Portugal"})
+
+	footballPlayers:Add("What is Lamine Yamal's jersey number at Barcelona?", {"19", "10", "7", "11"})
+	footballPlayers:Add("Which country does Lamine Yamal play for internationally?", {"Spain", "Brazil", "France", "Argentina"})
+	footballPlayers:Add("What position does Lamine Yamal mainly play?", {"Winger", "Striker", "Midfielder", "Defender"})
+
+	footballPlayers:Add("Who has more career goals: Ronaldo or Messi (as of mid-2025)?", {"Ronaldo", "Messi", "They are equal", "Neymar"}, 2)
+	footballPlayers:Add("Which of these players has won the most Champions League titles?", {"Ronaldo", "Messi", "Neymar", "Mbappé"})
 
 end -- End of quiz definitions
 
