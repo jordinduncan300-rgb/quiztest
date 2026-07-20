@@ -1266,6 +1266,7 @@ do
 	ronaldo:Add("As of 2025, which club does Cristiano Ronaldo play for?", {"Al-Nassr", "Manchester United", "Real Madrid", "Juventus"})
 	ronaldo:Add("How many Ballon d'Or awards has Ronaldo won?", {"5", "8", "4", "7"}, 2)
 	ronaldo:Add("What is Ronaldo's famous goal celebration called?", {"Siuuu", "The dab", "The worm", "The moonwalk"})
+	ronaldo:Add("who is the goat?", {"Ronaldo the real goat!!!!", "no messi"})
 
 	local messi = categoryManager.New("Lionel Messi")
 	messi:Add("What is Lionel Messi's iconic jersey number?", {"10", "7", "9", "19"})
