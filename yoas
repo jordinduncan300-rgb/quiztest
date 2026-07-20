@@ -1272,7 +1272,7 @@ do
 	messi:Add("Which country does Lionel Messi represent internationally?", {"Argentina", "Brazil", "Spain", "Portugal"}, 2)
 	messi:Add("As of 2025, which club does Lionel Messi play for?", {"Inter Miami", "Barcelona", "Paris Saint-Germain", "Manchester City"})
 	messi:Add("How many Ballon d'Or awards has Messi won?", {"8", "5", "7", "6"}, 2)
-	messi:Add("What is Messi's famous nickname?", {"The GOAT", "CR7", "Neymar Jr", "Kyky"})
+	messi:Add("What is Messi's famous nickname?", {"The GOAT Ronaldo better tho", "CR7", "Neymar Jr", "Kyky"})
 
 	local neymar = categoryManager.New("Neymar")
 	neymar:Add("What is Neymar's most common jersey number?", {"10", "7", "11", "9"})
@@ -1294,6 +1294,26 @@ do
 	yamal:Add("What is Lamine Yamal's playing position?", {"Winger", "Striker", "Midfielder", "Defender"})
 	yamal:Add("How old was Lamine Yamal when he debuted for Barcelona's first team?", {"15", "17", "16", "18"}, 2)
 	yamal:Add("Which major tournament did Lamine Yamal help Spain win in 2024?", {"Euro 2024", "World Cup 2022", "Copa America", "Nations League"})
+-- ==================== FIFA WORLD CUP ====================
+
+local worldCup = categoryManager.New("FIFA World Cup")
+worldCup:Add("Which country won the 2022 FIFA World Cup?", {"Argentina", "France", "Brazil", "Germany"}, 2)
+worldCup:Add("Who was the captain of Argentina during their 2022 World Cup victory?", {"Lionel Messi", "Cristiano Ronaldo", "Kylian Mbappé", "Neymar"})
+worldCup:Add("Which country has won the most World Cups?", {"Brazil", "Germany", "Argentina", "Italy"}, 2)
+worldCup:Add("In which year did France last win the World Cup before 2018?", {"1998", "2002", "2014", "2006"})
+worldCup:Add("Which country hosted the 2018 FIFA World Cup?", {"Russia", "Brazil", "Qatar", "South Africa"})
+
+worldCup:Add("Who scored the winning goal in the 2022 World Cup final?", {"Lionel Messi", "Kylian Mbappé", "Angel Di Maria", "Julián Álvarez"})
+worldCup:Add("Which country won the 2014 FIFA World Cup?", {"Germany", "Argentina", "Brazil", "Netherlands"})
+worldCup:Add("What is the record for most goals scored in a single World Cup by one player?", {"13 (Just Fontaine)", "8", "10", "11"})
+worldCup:Add("Which country will host the 2026 FIFA World Cup?", {"USA, Canada & Mexico", "Qatar", "Brazil", "Spain & Portugal"})
+worldCup:Add("Who won the Golden Boot in the 2018 World Cup?", {"Harry Kane", "Kylian Mbappé", "Antoine Griezmann", "Cristiano Ronaldo"})
+
+worldCup:Add("Which team has appeared in the most World Cup finals?", {"Germany", "Brazil", "Argentina", "Italy"})
+worldCup:Add("In which World Cup did the 'Hand of God' goal happen?", {"1986", "1990", "1978", "1994"}, 2)
+worldCup:Add("Which African country reached the quarter-finals in 2022?", {"Morocco", "Senegal", "Nigeria", "Ghana"})
+worldCup:Add("Who is the all-time top scorer in World Cup history?", {"Miroslav Klose", "Ronaldo Nazário", "Lionel Messi", "Pelé"})
+worldCup:Add("Which country won the first ever FIFA World Cup in 1930?", {"Uruguay", "Brazil", "Argentina", "Italy"})
 
 end -- End of quiz definitions
 
