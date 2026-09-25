@@ -1344,7 +1344,7 @@ yamalCat:Add("Lamine Yamal became the youngest goalscorer in the history of whic
 local gokuCat = categoryManager.New("Son Goku")
 gokuCat:Add("What is Son Goku's signature energy beam attack called?", {"Kamehameha", "Spirit Bomb", "Galick Gun", "Final Flash"})
 gokuCat:Add("What is Son Goku's original Saiyan birth name?", {"Kakarot", "Vegeta", "Raditz", "Broly"})
-gokuCat:Add("What form did Goku achieve during his legendary fight against Frieza on Planet Namek?", {"Super Saiyan", "Super Saiyan Blue", "Ultra Instinct", "Super Saiyan 3"}) -- new
+gokuCat:Add("What form did Goku achieve during his legendary fight against Frieza on Planet Namek?", {"Super Saiyan", "Super Saiyan Blue", "Ultra Instinct", "Super Saiyan 3"})
 
 end -- End of quiz definitions
 
