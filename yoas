@@ -1315,6 +1315,36 @@ worldCup:Add("In which World Cup did the 'Hand of God' goal happen?", {"1986", "
 worldCup:Add("Which African country reached the quarter-finals in 2022?", {"Morocco", "Senegal", "Nigeria", "Ghana"})
 worldCup:Add("Who is the all-time top scorer in World Cup history?", {"Miroslav Klose", "Ronaldo Nazário", "Lionel Messi", "Pelé"})
 worldCup:Add("Which country won the first ever FIFA World Cup in 1930?", {"Uruguay", "Brazil", "Argentina", "Italy"})
+--- Questions ---
+local ronaldoCat = categoryManager.New("Ronaldo")
+ronaldoCat:Add("What jersey number is Cristiano Ronaldo most famous for wearing?", {"7", "9", "10", "11"})
+ronaldoCat:Add("Which club did Ronaldo play for before joining Real Madrid?", {"Manchester United", "Sporting CP", "Juventus", "Al Nassr"})
+ronaldoCat:Add("What country does Cristiano Ronaldo represent internationally?", {"Portugal", "Brazil", "Spain", "Argentina"})
+
+local messiCat = categoryManager.New("Messi")
+messiCat:Add("What jersey number did Lionel Messi traditionally wear at Barcelona?", {"10", "7", "30", "19"})
+messiCat:Add("Which MLS club did Messi join in 2023?", {"Inter Miami", "LA Galaxy", "NYCFC", "LAFC"})
+messiCat:Add("In which year did Lionel Messi win his first FIFA World Cup?", {"2022", "2014", "2018", "2010"})
+
+local neymarCat = categoryManager.New("Neymar")
+neymarCat:Add("What jersey number did Neymar wear during his time at Santos and PSG?", {"10", "11", "7", "9"})
+neymarCat:Add("Which Saudi Pro League club did Neymar sign with in 2023?", {"Al Hilal", "Al Nassr", "Al Ittihad", "Al Ahli"})
+neymarCat:Add("Neymar famously won the Champions League alongside Messi and Suarez at which club?", {"Barcelona", "PSG", "Santos", "Real Madrid"})
+
+local mbappeCat = categoryManager.New("Mbappe")
+mbappeCat:Add("What jersey number does Kylian Mbappe wear for the France National Team?", {"10", "7", "9", "11"})
+mbappeCat:Add("Which historic club did Kylian Mbappe join in the summer of 2024?", {"Real Madrid", "PSG", "Monaco", "Liverpool"})
+mbappeCat:Add("Mbappe won the 2018 World Cup while playing for which nation?", {"France", "Cameroon", "Belgium", "Algeria"})
+
+local yamalCat = categoryManager.New("Lamine Yamal")
+yamalCat:Add("What historic jersey number did Lamine Yamal switch to at Barcelona for the 24/25 season?", {"19", "10", "27", "30"})
+yamalCat:Add("Which international tournament did Lamine Yamal win with Spain in 2024?", {"Euro 2024", "World Cup", "Nations League", "Copa America"})
+yamalCat:Add("Lamine Yamal became the youngest goalscorer in the history of which major league?", {"La Liga", "Premier League", "Serie A", "Ligue 1"})
+
+local gokuCat = categoryManager.New("Son Goku")
+gokuCat:Add("What is Son Goku's signature energy beam attack called?", {"Kamehameha", "Spirit Bomb", "Galick Gun", "Final Flash"})
+gokuCat:Add("What is Son Goku's original Saiyan birth name?", {"Kakarot", "Vegeta", "Raditz", "Broly"})
+gokuCat:Add("What form did Goku achieve during his legendary fight against Frieza on Planet Namek?", {"Super Saiyan", "Super Saiyan Blue", "Ultra Instinct", "Super Saiyan 3"}) -- new
 
 end -- End of quiz definitions
 
